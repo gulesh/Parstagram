@@ -13,7 +13,7 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         Parse.initialize(
@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://vast-escarpment-87504.herokuapp.com/parse"
             })
         )
+       
+        
         // Override point for customization after application launch.
         return true
     }

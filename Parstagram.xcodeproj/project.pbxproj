@@ -21,6 +21,8 @@
 		FAC48710246B71C800C7497A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4870F246B71C800C7497A /* LoginViewController.swift */; };
 		FAC48712246B782900C7497A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC48711246B782800C7497A /* CameraViewController.swift */; };
 		FAC48714246B868D00C7497A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC48713246B868D00C7497A /* PostCell.swift */; };
+		FAC487162471C65E00C7497A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC487152471C65E00C7497A /* CommentCell.swift */; };
+		FAC4871A247563DE00C7497A /* AddCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC48719247563DE00C7497A /* AddCommentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		FAC4870F246B71C800C7497A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FAC48711246B782800C7497A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		FAC48713246B868D00C7497A /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		FAC487152471C65E00C7497A /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		FAC48719247563DE00C7497A /* AddCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 				FAC4870F246B71C800C7497A /* LoginViewController.swift */,
 				FAC48711246B782800C7497A /* CameraViewController.swift */,
 				FAC48713246B868D00C7497A /* PostCell.swift */,
+				FAC487152471C65E00C7497A /* CommentCell.swift */,
+				FAC48719247563DE00C7497A /* AddCommentCell.swift */,
 			);
 			path = Parstagram;
 			sourceTree = "<group>";
@@ -419,9 +425,11 @@
 				FAC48710246B71C800C7497A /* LoginViewController.swift in Sources */,
 				FAC48712246B782900C7497A /* CameraViewController.swift in Sources */,
 				FAC486DE246A19B600C7497A /* AppDelegate.swift in Sources */,
+				FAC4871A247563DE00C7497A /* AddCommentCell.swift in Sources */,
 				FAC4870E246B71A000C7497A /* FeedViewController.swift in Sources */,
 				FAC486E0246A19B600C7497A /* SceneDelegate.swift in Sources */,
 				FAC48714246B868D00C7497A /* PostCell.swift in Sources */,
+				FAC487162471C65E00C7497A /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
