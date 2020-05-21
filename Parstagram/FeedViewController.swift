@@ -34,6 +34,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
     @objc func keyboardWillBeHidden(note: Notification){
         commentBar.inputTextView.text = nil
         showCommentBar = false
@@ -41,29 +44,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         commentBar.inputTextView.resignFirstResponder()
     }
     
-    func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-        //create a comment
-        let comment = PFObject(className: "Comments")
-        comment["text"] = text
-        comment["post"]  = selectedPost
-        comment["author"] = PFUser.current()!
-
-        selectedPost.add(comment, forKey: "comments")
-        selectedPost.saveInBackground { (success, error) in
-            if success{
-                print("saved comment")
-            }
-            else{
-                print("Error in commenting")
-            }
-        }
-        
-        tableView.reloadData()
-        //clear and dissmiss the input bar
-        commentBar.inputTextView.text = nil
-        showCommentBar = false
-        becomeFirstResponder()
-    }
+   
     override var inputAccessoryView: UIView?{
         return commentBar
     }
@@ -71,6 +52,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return showCommentBar
     }
     
+   
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let query = PFQuery(className: "Posts")
@@ -162,6 +144,30 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
     }
+    
+    func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+           //create a comment
+           let comment = PFObject(className: "Comments")
+           comment["text"] = text
+           comment["post"]  = selectedPost
+           comment["author"] = PFUser.current()!
+
+           selectedPost.add(comment, forKey: "comments")
+           selectedPost.saveInBackground { (success, error) in
+               if success{
+                   print("saved comment")
+               }
+               else{
+                   print("Error in commenting")
+               }
+           }
+           
+           tableView.reloadData()
+           //clear and dissmiss the input bar
+           commentBar.inputTextView.text = nil
+           showCommentBar = false
+           becomeFirstResponder()
+       }
     /*
     // MARK: - Navigation
 
